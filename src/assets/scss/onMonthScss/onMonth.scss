@@ -1,0 +1,70 @@
+$fontVar: 2em "Fira Sans",
+sans-serif;
+
+.monthRender {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &__date-elements {
+        height: 95vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &__go-back-button {
+        cursor: pointer;
+        border: none;
+    }
+}
+
+.month {
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__header {
+        font: $fontVar
+    }
+}
+
+.dayNames {
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        width: 100px;
+    }
+
+    &__header {
+        font: $fontVar;
+        font-size: 1em;
+    }
+}
+
+.days {
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+        justify-content: space-around;
+    }
+
+    &__item {
+        width: 100px;
+        height: 100px;
+    }
+
+    &__param {
+        font: $fontVar;
+        font-size: 1em;
+    }
+}

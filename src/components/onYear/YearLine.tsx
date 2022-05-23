@@ -7,9 +7,12 @@ function Year() {
     useEffect(() => { dispatch(YearUpdate(new Date().getFullYear().toString())) })
 
     const yearDateObj = useAppSelector(state => state.DataR.value)
-    console.log(yearDateObj)
-    return (<div>
-        <h1>{yearDateObj}</h1>
-    </div>)
+    return (
+        <div className='year'>
+            <div className='year__wrapper'>
+                <h1 className='year__header'>{yearDateObj}</h1>
+            </div>
+        </div>
+    )
 }
 export default Year;

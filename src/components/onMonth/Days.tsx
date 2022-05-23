@@ -11,7 +11,7 @@ function Days() {
     const monthDays = new Date(parseInt(currentDate[0]), currentMonthNum + 1, 0).getDate()
     const DateReturn = (i: number) => {
         if (i >= firstMonthDay() && i <= monthDays + firstMonthDay() - 1) {
-            return <h2> {i + 1 - firstMonthDay()} </h2>
+            return <h2 className='days__param'> {i + 1 - firstMonthDay()} </h2>
         }
         return ''
     }
@@ -22,11 +22,15 @@ function Days() {
         height: '100px',
         margin: '10px'
     }
-    return (<div>
-        {[...Array(42)].map((e, i) =>
-            <div key={i} style={divStyle}>
-                {DateReturn(i)}
-            </div>)}
+    return (<div className='days'>
+        <div className='days__wrapper'>
+            {
+                [...Array(42)].map((e, i) =>
+                    <div key={i} className='days__item'>
+                       {DateReturn(i)}
+                    </div>)
+            }
+        </div>
     </div>
     )
 }

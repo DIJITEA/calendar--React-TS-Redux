@@ -7,7 +7,7 @@ function GoToYear() {
 
         dispatch(appStateUpdate('year'))
     }
-    return (<div><button onClick={() => goBack()}>Back to year</button></div>)
+    return (<div><button className='monthRender__go-back-button' onClick={() => goBack()}>Back to year</button></div>)
 }
 
 export default GoToYear
