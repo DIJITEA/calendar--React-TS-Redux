@@ -9,11 +9,13 @@ function OnMonth() {
     console.log(currentDate[0] + '---' + currentDate[1])
     console.log(new Date(`${currentDate[1]} 1, ${currentDate[0]}`).getDay())
     return (<div className='monthRender monthRender__wrapper'>
-        <GoToYear />
         <div className='monthRender__date-elements'>
+            <GoToYear />
             <CurrentMonth />
-            <DayNames />
-            <Days />
+            <div>
+                <DayNames />
+                <Days />
+            </div>
         </div>
     </div>)
 }
